@@ -1,5 +1,5 @@
 # Use a stable Node LTS image
-FROM node:24-slim
+FROM node:20-slim
 
 # Create app directory
 WORKDIR /usr/src/app

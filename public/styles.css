@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  padding: 2rem;
+}
+
+.hero {
+  text-align: center;
+  padding-top: 10vh;
+}
