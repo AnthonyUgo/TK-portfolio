@@ -9,6 +9,40 @@ body {
   background-color: #f9f6f3;
   color: #1e1e1e;
 }
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95);
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1e1e1e;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f4d8b4;
+}
+
+/* Add scroll padding to prevent content hiding behind header */
+section {
+  scroll-margin-top: 100px;
+}
 
 /* Hero Section */
 .hero {
@@ -124,13 +158,31 @@ section#portfolio h2 {
   .card {
     width: 90%;
   }
-  
-  .test-box {
-  background-color: red;
-  color: white;
-  padding: 3rem;
-  text-align: center;
-  font-size: 2rem;
+
+  .style-group {
+  margin-bottom: 4rem;
 }
 
+.style-group h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #1e1e1e;
+  font-family: 'Playfair Display', serif;
+}
+
+.card.placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #f0f0f0,
+    #f0f0f0 10px,
+    #e0e0e0 10px,
+    #e0e0e0 20px
+  );
+  color: #999;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
 }
