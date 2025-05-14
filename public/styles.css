@@ -1,12 +1,127 @@
-body {
+* {
   margin: 0;
-  font-family: sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #f9f6f3;
+  color: #1e1e1e;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1582719478171-2a6c142f54de?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
   padding: 2rem;
 }
 
-.hero {
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.logo span {
+  font-weight: 300;
+  font-size: 1.5rem;
+  display: block;
+  text-transform: none;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 1rem 0 2rem;
+  color: #e8e6e3;
+}
+
+.btn {
+  background-color: #f4d8b4;
+  color: #1e1e1e;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e2c69e;
+}
+
+/* Portfolio Section */
+section#portfolio {
+  padding: 4rem 2rem;
   text-align: center;
-  padding-top: 10vh;
+  background-color: #fff;
+}
+
+section#portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #555;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
