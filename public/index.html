@@ -7,7 +7,32 @@
   <link rel="stylesheet" href="styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('navbar');
+
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+</script>
+
 <body>
+  <header>
+   <div class="nav-container">
+    <div class="logo-small">TK</div>
+    <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+    <nav id="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  </div>
+</header>
   <div class="hero">
     <div class="overlay">
       <h1 class="logo">TK <span>Curated</span></h1>
@@ -16,33 +41,71 @@
     </div>
   </div>
 <section id="portfolio">
-  <h2>Signature Styles</h2>
+  <h2>Featured Projects</h2>
 
-  <!-- Example style section -->
-  <div class="style-group">
-    <h3>Power Suits</h3>
-    <div class="grid">
-      <div class="card placeholder">Look 1</div>
-      <div class="card placeholder">Look 2</div>
-      <div class="card placeholder">Look 3</div>
+  <!-- START PROJECTS -->
+  <!-- Repeat pattern with different images and video placeholders -->
+  <!-- Project 1 -->
+  <div class="project">
+    <h3>Project 1</h3>
+    <div class="media-grid">
+      <div class="media media-image"><img src="media/project1/image1.jpg" alt="Project 1 Image 1"></div>
+      <div class="media media-image"><img src="media/project1/image2.jpg" alt="Project 1 Image 2"></div>
+      <div class="media media-image"><img src="media/project1/image3.jpg" alt="Project 1 Image 3"></div>
+      <div class="media media-image"><img src="media/project1/image4.jpg" alt="Project 1 Image 4"></div>
+      <div class="media media-image"><img src="media/project1/image5.jpg" alt="Project 1 Image 5"></div>
+      <div class="media media-image"><img src="media/project1/image6.jpg" alt="Project 1 Image 6"></div>
+      <div class="media media-image"><img src="media/project1/image7.jpg" alt="Project 1 Image 7"></div>
+      <div class="media media-image"><img src="media/project1/image8.jpg" alt="Project 1 Image 8"></div>
+      <div class="media media-image"><img src="media/project1/image9.jpg" alt="Project 1 Image 9"></div>
+      <div class="media media-video">
+        <video controls>
+          <source src="media/project1/video10.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 
-  <div class="style-group">
-    <h3>Brunch Chic</h3>
-    <div class="grid">
-      <div class="card placeholder">Look 1</div>
-      <div class="card placeholder">Look 2</div>
-      <div class="card placeholder">Look 3</div>
+  <div class="project">
+    <h3>Project 2</h3>
+    <div class="media-grid">
+      <div class="media media-image"><img src="media/project1/image1.jpg" alt="Project 1 Image 1"></div>
+      <div class="media media-image"><img src="media/project1/image2.jpg" alt="Project 1 Image 2"></div>
+      <div class="media media-image"><img src="media/project1/image3.jpg" alt="Project 1 Image 3"></div>
+      <div class="media media-image"><img src="media/project1/image4.jpg" alt="Project 1 Image 4"></div>
+      <div class="media media-image"><img src="media/project1/image5.jpg" alt="Project 1 Image 5"></div>
+      <div class="media media-image"><img src="media/project1/image6.jpg" alt="Project 1 Image 6"></div>
+      <div class="media media-image"><img src="media/project1/image7.jpg" alt="Project 1 Image 7"></div>
+      <div class="media media-image"><img src="media/project1/image8.jpg" alt="Project 1 Image 8"></div>
+      <div class="media media-image"><img src="media/project1/image9.jpg" alt="Project 1 Image 9"></div>
+      <div class="media media-video">
+        <video controls>
+          <source src="media/project2/video10.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 
-  <div class="style-group">
-    <h3>Streetwear</h3>
-    <div class="grid">
-      <div class="card placeholder">Look 1</div>
-      <div class="card placeholder">Look 2</div>
-      <div class="card placeholder">Look 3</div>
+  <div class="project">
+    <h3>Project 3</h3>
+    <div class="media-grid">
+      <div class="media media-image"><img src="media/project3/image1.jpg" alt="Project 1 Image 1"></div>
+      <div class="media media-image"><img src="media/project3/image2.jpg" alt="Project 1 Image 2"></div>
+      <div class="media media-image"><img src="media/project3/image3.jpg" alt="Project 1 Image 3"></div>
+      <div class="media media-image"><img src="media/project3/image4.jpg" alt="Project 1 Image 4"></div>
+      <div class="media media-image"><img src="media/project3/image5.jpg" alt="Project 1 Image 5"></div>
+      <div class="media media-image"><img src="media/project3/image6.jpg" alt="Project 1 Image 6"></div>
+      <div class="media media-image"><img src="media/project3/image7.jpg" alt="Project 1 Image 7"></div>
+      <div class="media media-image"><img src="media/project3/image8.jpg" alt="Project 1 Image 8"></div>
+      <div class="media media-image"><img src="media/project3/image9.jpg" alt="Project 1 Image 9"></div>
+      <div class="media media-video">
+        <video controls>
+          <source src="media/project3/video10.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 
@@ -108,6 +171,50 @@
       <div class="card placeholder">Look 3</div>
     </div>
   </div>
+</section>
+<section id="about">
+  <h2>About Trish Kennedy</h2>
+  <div class="about-content">
+    <p>
+      I am a versatile creative currently residing in Houston, Texas, and Lagos, Nigeria. From a young age, I have had a
+      passion for fashion and photography, which inspired me to pursue a career as a fashion designer. Throughout the
+      years, I have explored various fields, but I always knew I would find my way back to the arts.
+    </p>
+    <p>
+      My creative journey began in 2017 when I started modeling, a path I naturally embraced. In 2020, I transitioned into
+      styling and fashion design, as I frequently found myself on set surrounded by an abundance of clothing. This allowed
+      me to assist in styling both myself and other models. Eventually, I started creative directing my own photo shoots
+      and bringing other people's concepts to life. This transition has been incredibly rewarding, as I genuinely enjoy
+      helping others realize their creative visions and expectations.
+    </p>
+    <p>
+      I never anticipated that my curiosity for creativity would lead me this far, but it certainly has. Over the past eight
+      years, I have experienced and accomplished so much, and I am excited to see what the future has in store for me.
+    </p>
+
+    <div class="press-links">
+      <h3>Featured In</h3>
+      <ul>
+        <li><a href="https://canvasrebel.com/meet-trish-kennedy/" target="_blank">Canvas Rebel – Meet Trish Kennedy</a></li>
+        <li><a href="https://voyagesanantonio.com/interview/rising-stars-meet-trish-kennedy-of-houston/" target="_blank">Voyage SA – Rising Stars</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <h2>Get in Touch</h2>
+  <form action="https://formspree.io/f/xovdyjyz" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" name="email" required>
+
+    <label for="message">Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 </body>
 </html>
