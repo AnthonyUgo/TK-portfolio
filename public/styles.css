@@ -53,12 +53,12 @@ section {
 body {
   font-family: 'Kumbh Sans', sans-serif;
   background-color: #f9f6f3;
+  background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
   color: #1e1e1e;
-  padding-top: 70px; /* <-- pushes content below header */
-  padding-bottom: 4rem; /* <-- adds spacing at the end */
-  overflow-x: hidden;   /* <-- prevents horizontal scroll */
+  padding-top: 70px;
+  padding-bottom: 4rem;
+  overflow-x: hidden;
 }
-
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -361,13 +361,55 @@ nav ul li a:hover {
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 .media {
+  position: relative;
+  cursor: pointer;
   transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.media:hover {
-  transform: translateY(-8px) rotateZ(0.5deg);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+.camera-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 6px;
+  border-radius: 4px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.media:hover .camera-icon {
+  opacity: 1;
+}
+
+.flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.media:hover .camera-icon {
+  opacity: 1;
+}
+
+.flash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
 }
 
 /* MOBILE STYLES */

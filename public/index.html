@@ -246,7 +246,18 @@
         easing: 'ease-in-out',
         once: true
       });
+  
+  document.querySelectorAll('.media').forEach(media => {
+    const flash = document.createElement('div');
+    flash.className = 'flash';
+    media.appendChild(flash);
+
+    media.addEventListener('click', () => {
+      flash.style.opacity = 0.7;
+      setTimeout(() => flash.style.opacity = 0, 150);
     });
-  </script>
+  });
+});
+</script>
 </body>
 </html>
