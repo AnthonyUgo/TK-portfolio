@@ -54,8 +54,11 @@ body {
   font-family: 'Kumbh Sans', sans-serif;
   background-color: #f9f6f3;
   color: #1e1e1e;
-  padding-top: 70px; /* <-- This pushes the content below the header */
+  padding-top: 70px; /* <-- pushes content below header */
+  padding-bottom: 4rem; /* <-- adds spacing at the end */
+  overflow-x: hidden;   /* <-- prevents horizontal scroll */
 }
+
 
 .overlay {
   background-color: rgba(0, 0, 0, 0.5);
@@ -318,6 +321,54 @@ nav ul li a {
 nav ul li a:hover {
   color: #f4d8b4;
 }
+  #portfolio {
+  padding: 4rem 2rem;
+  background-color: #fff;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 3rem;
+}
+
+.project {
+  margin-bottom: 4rem;
+}
+
+.project h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+  color: #1e1e1e;
+}
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.media img,
+.media video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+.media {
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media:hover {
+  transform: translateY(-8px) rotateZ(0.5deg);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
 
 /* MOBILE STYLES */
 @media (max-width: 768px) {
@@ -345,40 +396,4 @@ nav ul li a:hover {
   nav ul li {
     margin-bottom: 1rem;
   }
-  #portfolio {
-  padding: 4rem 2rem;
-  background-color: #fff;
-}
-
-#portfolio h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 3rem;
-}
-
-.project {
-  margin-bottom: 4rem;
-}
-
-.project h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
-  color: #1e1e1e;
-}
-
-.media-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
-}
-
-.media img,
-.media video {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  object-fit: cover;
-}
 }
