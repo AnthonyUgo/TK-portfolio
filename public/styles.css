@@ -282,6 +282,12 @@ button:hover {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: bold;
+  text-decoration: none;
+  color: #1e1e1e;
+}
+
+.logo-small:hover {
+  color: #f4d8b4;
 }
 
 /* Hamburger toggle button */
