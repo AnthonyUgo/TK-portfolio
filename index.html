@@ -13,20 +13,21 @@
 
 <body>
   <header>
-   <div class="nav-container">
+  <div class="nav-container">
     <a href="#hero" class="logo-small">TK</a>
     <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
     <nav id="navbar">
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>
+
   <div class="hero" id="hero"> <!-- Keep the class for now -->
 <!-- but visually it will start being overridden by Vanilla Extract -->
   <div class="overlay">
@@ -543,5 +544,24 @@
 });
 </script>
 <script type="module" src="/src/main.ts"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.getElementById('navbar');
+
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+      });
+
+      // Auto-close after link click
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('active');
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>

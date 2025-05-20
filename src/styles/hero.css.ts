@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style, globalStyle } from '@vanilla-extract/css';
 import { vars } from './theme.css';
 
 export const hero = style({
@@ -12,6 +12,37 @@ export const hero = style({
   justifyContent: 'center',
   alignItems: 'center',
   color: vars.color.white,
-  padding: vars.spacing.md,
   textAlign: 'center',
+});
+
+globalStyle('.hero', {
+  backgroundImage: `url('https://images.unsplash.com/photo-1582719478171-2a6c142f54de?auto=format&fit=crop&w=1600&q=80')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  height: '100vh',
+  width: '100vw',
+  position: 'relative',
+  left: '0',        // ✅ Ensure it's flush with viewport edge
+  right: '0',
+  margin: '0',      // ✅ Cancel any centered parent layout
+  padding: '0',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: '#ffffff',
+  textAlign: 'center',
+});
+
+globalStyle('.overlay', {
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  height: '100%',
+  width: '100%', // ✅ make it fill horizontally
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center',
+  color: '#ffffff',
+  textAlign: 'center',
+  padding: '2rem',
 });

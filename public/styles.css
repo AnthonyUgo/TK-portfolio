@@ -412,12 +412,35 @@ nav ul li a:hover {
   pointer-events: none;
 }
 
-/* MOBILE STYLES */
 @media (max-width: 768px) {
-  #menu-toggle {
-    display: block;
+  .logo {
+    font-size: 2.5rem;
   }
 
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  /* Show hamburger button */
+  #menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1e1e1e;
+  }
+
+  /* Hide nav by default */
   #navbar ul {
     display: none;
     flex-direction: column;
@@ -428,9 +451,11 @@ nav ul li a:hover {
     right: 0;
     width: 100%;
     padding: 1rem 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* ensures it's above everything */
   }
 
+  /* Show nav when active */
   #navbar.active ul {
     display: flex;
   }
@@ -439,3 +464,4 @@ nav ul li a:hover {
     margin-bottom: 1rem;
   }
 }
+

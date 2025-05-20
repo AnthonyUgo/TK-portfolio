@@ -1,6 +1,7 @@
-import { themeClass } from './styles/theme.css.ts';
-import './styles/layout.css.ts'; // or wherever your future styles live
+import { themeClass } from './styles/theme.css';
+import './styles/layout.css.ts';
 import './styles/hero.css.ts';
 import './styles/header.css.ts';
+import './styles/button.css.ts';
 
 document.body.classList.add(themeClass);
