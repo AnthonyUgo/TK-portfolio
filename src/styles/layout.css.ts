@@ -1,34 +1,32 @@
+/* layout.css.ts (Vanilla Extract version of styles.css)
+   This is a full port of your original styles.css */
+
 import { globalStyle } from '@vanilla-extract/css';
 
-// -----------------------------
-// Base reset styles
-// -----------------------------
+// ============================
+// 🌍 Global Reset & Body
+// ============================
 globalStyle('html', {
   scrollBehavior: 'smooth',
 });
-
 globalStyle('*', {
   margin: 0,
   padding: 0,
   boxSizing: 'border-box',
 });
-
-// -----------------------------
-// Body and typography
-// -----------------------------
 globalStyle('body', {
-  fontFamily: "'Kumbh Sans', sans-serif",
+  fontFamily: `'Kumbh Sans', sans-serif`,
   backgroundColor: '#f9f6f3',
-  backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")',
+  backgroundImage: `url('https://www.transparenttextures.com/patterns/paper-fibers.png')`,
   color: '#1e1e1e',
   paddingTop: '70px',
   paddingBottom: '4rem',
   overflowX: 'hidden',
 });
 
-// -----------------------------
-// Header
-// -----------------------------
+// ============================
+// 🧱 Header & Navigation
+// ============================
 globalStyle('header', {
   position: 'fixed',
   width: '100%',
@@ -39,15 +37,26 @@ globalStyle('header', {
   boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
 });
 
-// -----------------------------
-// Navigation styles
-// -----------------------------
+globalStyle('.nav-container', {
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '1rem 2rem',
+});
+
+globalStyle('#menu-toggle', {
+  fontSize: '2rem',
+  background: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  display: 'none',
+});
+
 globalStyle('nav ul', {
   display: 'flex',
-  justifyContent: 'center',
   gap: '2rem',
-  padding: '1rem 0',
   listStyle: 'none',
+  padding: 0,
   margin: 0,
 });
 
@@ -62,89 +71,145 @@ globalStyle('nav ul li a:hover', {
   color: '#f4d8b4',
 });
 
-globalStyle('nav ul.active', {
+globalStyle('section', {
+  scrollMarginTop: '100px',
+});
+
+// ============================
+// 🦸 Hero Section
+// ============================
+globalStyle('.hero', {
+  backgroundImage: `url('https://images.unsplash.com/photo-1582719478171-2a6c142f54de?auto=format&fit=crop&w=1600&q=80')`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  height: '100vh',
+  position: 'relative',
+});
+
+globalStyle('.overlay', {
+  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  height: '100%',
   display: 'flex',
   flexDirection: 'column',
-  gap: '1rem',
-  padding: '1rem',
+  justifyContent: 'center',
   alignItems: 'center',
+  color: 'white',
+  textAlign: 'center',
+  padding: '2rem',
 });
 
-// -----------------------------
-// Nav container layout
-// -----------------------------
-globalStyle('.nav-container', {
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  padding: '1rem 2rem',
+globalStyle('.logo', {
+  fontFamily: `'Playfair Display', serif`,
+  fontSize: '4rem',
+  letterSpacing: '0.05em',
+  textTransform: 'uppercase',
 });
 
-// -----------------------------
-// Hamburger button
-// -----------------------------
-globalStyle('#menu-toggle', {
-  fontSize: '1.75rem',
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
+globalStyle('.logo span', {
+  fontWeight: 300,
+  fontSize: '1.5rem',
   display: 'block',
-  '@media': {
-    '(min-width: 768px)': {
-      display: 'none',
-    },
-    '(max-width: 767px)': {
-      marginLeft: 'auto',
-    },
-  },
+  textTransform: 'none',
 });
 
-// -----------------------------
-// Responsive nav layout (mobile)
-// -----------------------------
-globalStyle('nav ul', {
-  '@media': {
-    '(max-width: 767px)': {
-      display: 'none',
-    },
-  },
+globalStyle('.tagline', {
+  fontSize: '1.2rem',
+  margin: '1rem 0 2rem',
+  color: '#e8e6e3',
 });
 
-globalStyle('.nav-container', {
-  '@media': {
-    '(max-width: 767px)': {
-      flexDirection: 'row',
-    },
-  },
+globalStyle('.btn', {
+  backgroundColor: '#f4d8b4',
+  color: '#1e1e1e',
+  padding: '0.75rem 1.5rem',
+  border: 'none',
+  borderRadius: '25px',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  transition: 'background-color 0.3s ease',
 });
 
-globalStyle('nav', {
-  '@media': {
-    '(max-width: 767px)': {
-      flexGrow: 1,
-      textAlign: 'right',
-    },
-  },
+globalStyle('.btn:hover', {
+  backgroundColor: '#e2c69e',
 });
 
-// -----------------------------
-// Flash camera click effect
-// -----------------------------
+// ============================
+// 🖼️ Media & Flash Effects
+// ============================
+globalStyle('.media', {
+  position: 'relative',
+  cursor: 'pointer',
+  transform: 'translateY(0)',
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+});
+
+globalStyle('.media img, .media video', {
+  width: '100%',
+  height: 'auto',
+  display: 'block',
+  borderRadius: '12px',
+  objectFit: 'cover',
+  boxShadow: '0 5px 20px rgba(0,0,0,0.05)',
+});
+
 globalStyle('.flash', {
   position: 'absolute',
   top: 0,
   left: 0,
-  width: '100%',
   height: '100%',
+  width: '100%',
   background: 'white',
+  opacity: 0,
+  pointerEvents: 'none',
+  transition: 'opacity 0.2s ease',
+});
+
+globalStyle('.camera-icon', {
+  position: 'absolute',
+  top: '10px',
+  right: '10px',
+  fontSize: '1.2rem',
+  color: '#fff',
+  background: 'rgba(0, 0, 0, 0.4)',
+  padding: '4px 6px',
+  borderRadius: '4px',
   opacity: 0,
   transition: 'opacity 0.2s ease',
   pointerEvents: 'none',
-  borderRadius: 'inherit',
-  zIndex: 2,
 });
 
-globalStyle('.media', {
-  position: 'relative',
-  overflow: 'hidden',
+globalStyle('.media:hover .camera-icon', {
+  opacity: 1,
+});
+
+// ============================
+// 📱 Responsive
+// ============================
+globalStyle('@media (max-width: 768px)', 
+  {
+  '.logo': { fontSize: '2.5rem' },
+  '.tagline': { fontSize: '1rem' },
+  '#menu-toggle': {
+    display: 'block',
+    color: '#1e1e1e',
+  },
+  '#navbar ul': {
+    display: 'none',
+    flexDirection: 'column',
+    textAlign: 'left',
+    backgroundColor: '#fff',
+    position: 'absolute',
+    top: '70px',
+    right: 0,
+    width: '100%',
+    padding: '1rem 2rem',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    zIndex: 999,
+  },
+  '#navbar.active ul': {
+    display: 'flex',
+  },
+  'nav ul li': {
+    marginBottom: '1rem',
+  },
 });
