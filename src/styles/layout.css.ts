@@ -1,5 +1,4 @@
-/* layout.css.ts (Vanilla Extract version of styles.css)
-   This is a full port of your original styles.css */
+/* layout.css.ts (Vanilla Extract version of styles.css) */
 
 import { globalStyle } from '@vanilla-extract/css';
 
@@ -42,6 +41,14 @@ globalStyle('.nav-container', {
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '1rem 2rem',
+});
+
+globalStyle('.logo-small', {
+  fontFamily: `'Playfair Display', serif`,
+  fontSize: '2rem',
+  color: '#1e1e1e',
+  textDecoration: 'none',
+  fontWeight: 'bold',
 });
 
 globalStyle('#menu-toggle', {
@@ -185,13 +192,16 @@ globalStyle('.media:hover .camera-icon', {
 // ============================
 // 📱 Responsive
 // ============================
-globalStyle('@media (max-width: 768px)', 
-  {
+globalStyle('@media (max-width: 768px)', {
   '.logo': { fontSize: '2.5rem' },
   '.tagline': { fontSize: '1rem' },
   '#menu-toggle': {
     display: 'block',
     color: '#1e1e1e',
+    position: 'absolute',
+    top: '1.25rem',
+    right: '1.5rem',
+    zIndex: 1001,
   },
   '#navbar ul': {
     display: 'none',
@@ -212,4 +222,68 @@ globalStyle('@media (max-width: 768px)',
   'nav ul li': {
     marginBottom: '1rem',
   },
+});
+
+// ============================
+// 📦 Project Section & Grid
+// ============================
+globalStyle('.project', {
+  margin: '3rem 0',
+});
+
+globalStyle('.project h3', {
+  marginBottom: '1rem',
+});
+
+globalStyle('.media-grid', {
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+  gap: '1rem',
+});
+
+// ============================
+// 📬 Contact Form
+// ============================
+globalStyle('form', {
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1rem',
+  maxWidth: '500px',
+  margin: '2rem auto',
+});
+
+globalStyle('form label', {
+  fontWeight: 'bold',
+});
+
+globalStyle('form input, form textarea', {
+  padding: '0.75rem',
+  fontSize: '1rem',
+  border: '1px solid #ccc',
+  borderRadius: '4px',
+  fontFamily: `'Kumbh Sans', sans-serif`,
+});
+
+globalStyle('form button[type="submit"]', {
+  backgroundColor: '#f4d8b4',
+  color: '#1e1e1e',
+  padding: '0.75rem 1.5rem',
+  border: 'none',
+  borderRadius: '25px',
+  fontWeight: 'bold',
+  cursor: 'pointer',
+  transition: 'background-color 0.3s ease',
+});
+
+globalStyle('form button[type="submit"]:hover', {
+  backgroundColor: '#e2c69e',
+});
+
+// ============================
+// 🧱 Section Headings
+// ============================
+globalStyle('section h2', {
+  textAlign: 'center',
+  margin: '2rem 0 1rem',
+  fontSize: '2rem',
 });
