@@ -51,6 +51,10 @@ globalStyle('.logo-small', {
   fontWeight: 'bold',
 });
 
+globalStyle('.logo-small:hover', {
+  color: '#f4d8b4',
+});
+
 globalStyle('#menu-toggle', {
   fontSize: '2rem',
   background: 'none',
@@ -286,4 +290,35 @@ globalStyle('section h2', {
   textAlign: 'center',
   margin: '2rem 0 1rem',
   fontSize: '2rem',
+});
+
+// ============================
+// 🧾 About Section
+// ============================
+globalStyle('#about', {
+  maxWidth: '900px',
+  margin: '0 auto',
+  padding: '2rem',
+  lineHeight: '1.8',
+  fontSize: '1.1rem',
+});
+
+globalStyle('.about-content p', {
+  marginBottom: '1.5rem',
+});
+
+globalStyle('.press-links h3', {
+  marginTop: '2rem',
+  marginBottom: '1rem',
+});
+
+globalStyle('.press-links ul', {
+  listStyle: 'disc',
+  paddingLeft: '1.25rem',
+});
+
+globalStyle('.press-links ul li a', {
+  color: '#1e1e1e',
+  textDecoration: 'underline',
+  fontWeight: 'bold',
 });
