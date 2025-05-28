@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <script type="module" src="/src/admin.ts"></script> <!-- This loads both logic + admin.css.ts -->
+</head>
+<body>
+  <div class="dashboard">
+    <h1>Welcome, Admin</h1>
+    <div class="actions">
+      <button id="logoutBtn">Logout</button>
+      <input type="file" id="mediaUpload" accept="image/*,video/*" />
+      <button id="uploadBtn">Upload</button>
+    </div>
+
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</body>
+</html>

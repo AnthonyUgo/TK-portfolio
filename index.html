@@ -23,6 +23,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="/admin-login.html" class="btn">Admin Login</a></li>
       </ul>
     </nav>
   </div>
@@ -560,6 +561,34 @@
           nav.classList.remove('active');
         });
       });
+    }
+  });
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+  import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCYDNFAZgV1p1n349N1TnLDAkPVesvTkpE",
+    authDomain: "tk-curated.firebaseapp.com",
+    projectId: "tk-curated",
+    storageBucket: "tk-curated.firebasestorage.app",
+    messagingSenderId: "474567523573",
+    appId: "1:474567523573:web:5c7e6f51ff86f5158619bc",
+    measurementId: "G-RSTZZET7G6"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth();
+
+  const adminNavItem = document.getElementById("admin-nav-item");
+
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      adminNavItem.innerHTML = `<a href="/admin-dashboard.html" class="btn">Dashboard</a>`;
+    } else {
+      adminNavItem.innerHTML = `<a href="/admin-login.html" class="btn">Admin Login</a>`;
     }
   });
 </script>
