@@ -28,3 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.faq-question').forEach((button) => {
+    button.addEventListener('click', () => {
+      const answer = (button as HTMLElement).nextElementSibling as HTMLElement;
+      const isOpen = answer.style.display === 'block';
+      answer.style.display = isOpen ? 'none' : 'block';
+    });
+  });
+});

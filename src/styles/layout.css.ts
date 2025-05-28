@@ -322,3 +322,59 @@ globalStyle('.press-links ul li a', {
   textDecoration: 'underline',
   fontWeight: 'bold',
 });
+
+globalStyle('.faq-section', {
+  maxWidth: '800px',
+  margin: '0 auto',
+  padding: '3rem 1.5rem',
+  fontSize: '1.1rem',
+  color: '#1e1e1e',
+  fontFamily: `'Kumbh Sans', sans-serif`,
+});
+
+globalStyle('.faq-section h2', {
+  textAlign: 'center',
+  marginBottom: '2.5rem',
+  fontSize: '2rem',
+  fontWeight: 'bold',
+});
+
+globalStyle('.faq-item', {
+  backgroundColor: '#fff',
+  borderRadius: '16px',
+  boxShadow: '0 8px 20px rgba(0,0,0,0.06)',
+  marginBottom: '1.5rem',
+  overflow: 'hidden',
+  transition: 'box-shadow 0.3s ease',
+});
+
+globalStyle('.faq-question', {
+  backgroundColor: '#f4d8b4',
+  padding: '1rem 1.25rem',
+  width: '100%',
+  border: 'none',
+  fontWeight: 'bold',
+  fontSize: '1.05rem',
+  textAlign: 'left',
+  cursor: 'pointer',
+  transition: 'background-color 0.3s',
+});
+
+globalStyle('.faq-question:hover', {
+  backgroundColor: '#ecd0a8',
+});
+
+globalStyle('.faq-answer', {
+  padding: '1rem 1.25rem',
+  backgroundColor: '#faf9f7',
+  fontSize: '1rem',
+  lineHeight: '1.6',
+  display: 'none',
+  animation: 'fadeIn 0.4s ease-in-out',
+});
+
+// Soft fade animation
+globalStyle('@keyframes fadeIn', {
+  from: { opacity: 0 },
+  to: { opacity: 1 },
+});
