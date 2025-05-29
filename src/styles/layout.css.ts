@@ -295,12 +295,74 @@ globalStyle('section h2', {
 // ============================
 // 🧾 About Section
 // ============================
+
 globalStyle('#about', {
-  maxWidth: '900px',
+  display: 'flex',
+  flexDirection: 'row',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  gap: '3rem',
+  maxWidth: '1200px',
   margin: '0 auto',
+  padding: '4rem 2rem',
+});
+
+globalStyle('.about-content', {
+  flex: '1',
+  backgroundColor: '#f9f9f9',
   padding: '2rem',
-  lineHeight: '1.8',
+  borderRadius: '1rem',
+  boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)',
   fontSize: '1.1rem',
+  lineHeight: '1.8',
+});
+
+globalStyle('.about-content p', {
+  marginBottom: '1.5rem',
+});
+
+// 🔲 Section Wrapper
+globalStyle('#about', {
+  padding: '4rem 2rem',
+  maxWidth: '1200px',
+  margin: '0 auto',
+});
+
+globalStyle('.about-wrapper', {
+  display: 'flex',
+  gap: '3rem',
+  alignItems: 'center',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap', // fallback on small widths
+});
+
+// 🖼️ Image Container
+globalStyle('.about-image', {
+  flex: '0 0 35%',
+  display: 'flex',
+  justifyContent: 'center',
+});
+
+globalStyle('.about-image img', {
+  width: '100%',
+  maxWidth: '300px',
+  borderRadius: '50% / 35%', // oval shape
+  objectFit: 'cover',
+  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.08)',
+});
+
+// 📄 Text Content
+globalStyle('.about-content', {
+  flex: '1',
+  fontSize: '1.1rem',
+  lineHeight: '1.75',
+});
+
+globalStyle('.about-content h2', {
+  marginBottom: '1.5rem',
+  fontSize: '2rem',
+  fontWeight: 'bold',
 });
 
 globalStyle('.about-content p', {
@@ -322,6 +384,34 @@ globalStyle('.press-links ul li a', {
   textDecoration: 'underline',
   fontWeight: 'bold',
 });
+
+// 📱 Responsive Layout
+globalStyle('@media (max-width: 768px)', {
+  '.about-wrapper': {
+    flexDirection: 'column',
+    textAlign: 'center',
+  },
+  '.about-image': {
+    marginBottom: '2rem',
+  },
+});
+
+globalStyle('.press-links h3', {
+  marginTop: '2rem',
+  marginBottom: '1rem',
+});
+
+globalStyle('.press-links ul', {
+  listStyle: 'disc',
+  paddingLeft: '1.25rem',
+});
+
+globalStyle('.press-links ul li a', {
+  color: '#1e1e1e',
+  textDecoration: 'underline',
+  fontWeight: 'bold',
+});
+
 
 globalStyle('.faq-section', {
   maxWidth: '800px',
@@ -373,8 +463,17 @@ globalStyle('.faq-answer', {
   animation: 'fadeIn 0.4s ease-in-out',
 });
 
-// Soft fade animation
-globalStyle('@keyframes fadeIn', {
-  from: { opacity: 0 },
-  to: { opacity: 1 },
+// styles/fadeIn.css.ts
+import { keyframes, style } from '@vanilla-extract/css';
+
+// Step 1: Define the animation
+export const fadeIn = keyframes({
+  '0%': { opacity: 0 },
+  '100%': { opacity: 1 },
 });
+
+// Step 2: Apply the animation to a style
+export const fadeInStyle = style({
+  animation: `${fadeIn} 0.4s ease-in-out`,
+});
+
