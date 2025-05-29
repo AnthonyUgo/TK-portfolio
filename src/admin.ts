@@ -43,7 +43,7 @@ uploadBtn?.addEventListener('click', async () => {
   const file = mediaUpload.files?.[0];
   if (!file) return alert("No file selected.");
 
-  const selectedProject = 'project1'; // 🔁 Or make this dynamic later
+  const selectedProject = (document.getElementById('projectSelect') as HTMLSelectElement).value;
 
   const storagePath = `media/${selectedProject}/${file.name}`;
   const storageRef = ref(storage, storagePath);
@@ -89,9 +89,9 @@ async function loadProjects() {
     card.className = 'project-card';
 
     let mediaHtml = '';
-    images.forEach((img: string) => {
-      mediaHtml += `<img src="${img}" alt="Project Image" style="max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />`;
-    });
+   images.forEach((img: string) => {
+  mediaHtml += `<img src="${img}" alt="Project Image" style="max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />`;
+   });
     videos.forEach((vid: string) => {
       mediaHtml += `<video controls src="${vid}" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;"></video>`;
     });
