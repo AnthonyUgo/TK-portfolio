@@ -2,7 +2,7 @@ import { style, globalStyle } from '@vanilla-extract/css';
 import { vars } from './theme.css';
 
 export const hero = style({
-  backgroundImage: `url('https://images.unsplash.com/photo-1582719478171-2a6c142f54de?auto=format&fit=crop&w=1600&q=80')`,
+  backgroundImage: `url('/assets/hero-bg-optimized.jpg')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',
@@ -16,7 +16,7 @@ export const hero = style({
 });
 
 globalStyle('.hero', {
-  backgroundImage: `url('https://images.unsplash.com/photo-1582719478171-2a6c142f54de?auto=format&fit=crop&w=1600&q=80')`,
+  backgroundImage: `url('/assets/hero-bg-optimized.jpg')`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '100vh',

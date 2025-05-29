@@ -57,14 +57,27 @@ async function loadProjects() {
     const docRef = doc(db, 'projects', project.id);
     const docSnap = await getDoc(docRef);
     const name = docSnap.exists() ? docSnap.data().name : project.name;
+    const images = docSnap.exists() ? docSnap.data().images || [] : [];
+    const videos = docSnap.exists() ? docSnap.data().videos || [] : [];
 
     const card = document.createElement('div');
     card.className = 'project-card';
+
+    let mediaHtml = '';
+    images.forEach((img: string) => {
+      mediaHtml += `<img src="${img}" alt="Project Image" style="max-width: 100%; border-radius: 8px; margin-bottom: 0.5rem;" />`;
+    });
+    videos.forEach((vid: string) => {
+      mediaHtml += `<video controls src="${vid}" style="width: 100%; border-radius: 8px; margin-bottom: 0.5rem;"></video>`;
+    });
+
     card.innerHTML = `
-      <img src="https://via.placeholder.com/300x200?text=${encodeURIComponent(name)}" alt="Placeholder" />
+      <h3>${name}</h3>
+      ${mediaHtml}
       <input type="text" value="${name}" id="input-${project.id}" />
       <button data-id="${project.id}">Save Name</button>
     `;
+
     projectGrid?.appendChild(card);
   }
 
@@ -74,7 +87,11 @@ async function loadProjects() {
       if (id) {
         const input = document.getElementById(`input-${id}`) as HTMLInputElement;
         const name = input.value;
-        await setDoc(doc(db, 'projects', id), { name });
+        const docRef = doc(db, 'projects', id);
+        const docSnap = await getDoc(docRef);
+        const images = docSnap.exists() ? docSnap.data().images || [] : [];
+        const videos = docSnap.exists() ? docSnap.data().videos || [] : [];
+        await setDoc(doc(db, 'projects', id), { name, images, videos });
         alert('Project name updated!');
       }
     });
