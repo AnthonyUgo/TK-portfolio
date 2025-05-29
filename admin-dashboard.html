@@ -4,13 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Admin Dashboard</title>
-  <script type="module" src="/src/admin.ts"></script> <!-- This loads both logic + admin.css.ts -->
+  <script type="module" src="/src/admin.ts"></script>
 </head>
 <body>
   <div class="dashboard">
     <h1>Welcome, Admin</h1>
     <div class="actions">
       <button id="logoutBtn">Logout</button>
+
+      <!-- 🔽 Project Selector -->
+      <label for="projectSelect">Select Project:</label>
+      <select id="projectSelect">
+        <option value="project1">Look One</option>
+        <option value="project2">Look Two</option>
+        <option value="project3">Look Three</option>
+        <option value="project4">Look Four</option>
+        <option value="project5">Look Five</option>
+      </select>
+
+      <!-- 📁 File Input & Upload -->
       <input type="file" id="mediaUpload" accept="image/*,video/*" />
       <button id="uploadBtn">Upload</button>
     </div>

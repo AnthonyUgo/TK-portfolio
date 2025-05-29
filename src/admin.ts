@@ -1,10 +1,10 @@
 // src/admin.ts
-import './styles/admin.css.ts'; // this applies your dashboard styles
+import './styles/admin.css.ts';
 
 import { initializeApp } from "firebase/app";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+import { getFirestore, doc, setDoc, getDoc, updateDoc, arrayUnion } from "firebase/firestore";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 // Firebase config
 const firebaseConfig = {
@@ -20,30 +20,54 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 const db = getFirestore();
-const storage = getStorage();
+const storage = getStorage(app);
 
 const logoutBtn = document.getElementById('logoutBtn') as HTMLButtonElement;
 const uploadBtn = document.getElementById('uploadBtn') as HTMLButtonElement;
 const mediaUpload = document.getElementById('mediaUpload') as HTMLInputElement;
 const projectGrid = document.getElementById('projectGrid') as HTMLDivElement;
 
+// Listen for auth state
 onAuthStateChanged(auth, user => {
   if (!user) window.location.href = "/admin-login.html";
 });
 
+// Handle logout
 logoutBtn?.addEventListener('click', async () => {
   await signOut(auth);
   window.location.href = "/";
 });
 
+// Handle file upload
 uploadBtn?.addEventListener('click', async () => {
-  const file = mediaUpload.files[0];
+  const file = mediaUpload.files?.[0];
   if (!file) return alert("No file selected.");
-  const storageRef = ref(storage, `media/${file.name}`);
-  await uploadBytes(storageRef, file);
-  alert("Upload successful!");
+
+  const selectedProject = 'project1'; // 🔁 Or make this dynamic later
+
+  const storagePath = `media/${selectedProject}/${file.name}`;
+  const storageRef = ref(storage, storagePath);
+
+  try {
+    await uploadBytes(storageRef, file);
+    const downloadURL = await getDownloadURL(storageRef);
+    console.log("Uploaded file to:", storagePath);
+    console.log("Download URL:", downloadURL);
+
+    const mediaRef = doc(db, 'projects', selectedProject);
+    await updateDoc(mediaRef, {
+      images: arrayUnion(downloadURL)
+    });
+
+    alert("Upload successful!");
+    location.reload(); // Show updated project
+  } catch (err) {
+    console.error("Upload error:", err);
+    alert("Upload failed. Check console for details.");
+  }
 });
 
+// Default project cards
 const defaultProjects = [
   { id: 'project1', name: 'Look One' },
   { id: 'project2', name: 'Look Two' },
@@ -52,6 +76,7 @@ const defaultProjects = [
   { id: 'project5', name: 'Look Five' },
 ];
 
+// Load project cards into the grid
 async function loadProjects() {
   for (const project of defaultProjects) {
     const docRef = doc(db, 'projects', project.id);
@@ -81,17 +106,20 @@ async function loadProjects() {
     projectGrid?.appendChild(card);
   }
 
+  // Save project name
   document.querySelectorAll('.project-card button')?.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       const id = (e.target as HTMLElement).getAttribute('data-id');
       if (id) {
         const input = document.getElementById(`input-${id}`) as HTMLInputElement;
         const name = input.value;
+
         const docRef = doc(db, 'projects', id);
         const docSnap = await getDoc(docRef);
         const images = docSnap.exists() ? docSnap.data().images || [] : [];
         const videos = docSnap.exists() ? docSnap.data().videos || [] : [];
-        await setDoc(doc(db, 'projects', id), { name, images, videos });
+
+        await setDoc(docRef, { name, images, videos });
         alert('Project name updated!');
       }
     });

@@ -63,16 +63,14 @@ globalStyle('.overlay', {
 
 // 📱 Responsive tweaks
 globalStyle('@media (max-width: 768px)', {
-  // No styles here!
+  '.hero': {
+    backgroundPosition: 'top',
+    height: '90vh',
+    backgroundAttachment: 'scroll',
+  },
+  '.overlay': {
+    padding: '1rem',
+  },
 });
 
-globalStyle('@media (max-width: 768px) .hero', {
-  backgroundPosition: 'top',
-  height: '90vh',
-  backgroundAttachment: 'scroll',
-});
-
-globalStyle('@media (max-width: 768px) .overlay', {
-  padding: '1rem',
-});
 
