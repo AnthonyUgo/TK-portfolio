@@ -63,12 +63,16 @@ globalStyle('.overlay', {
 
 // 📱 Responsive tweaks
 globalStyle('@media (max-width: 768px)', {
-  '.hero': {
-    backgroundPosition: 'top',
-    height: '90vh',
-    backgroundAttachment: 'scroll', // disable parallax on mobile
-  },
-  '.overlay': {
-    padding: '1rem',
-  },
+  // No styles here!
 });
+
+globalStyle('@media (max-width: 768px) .hero', {
+  backgroundPosition: 'top',
+  height: '90vh',
+  backgroundAttachment: 'scroll',
+});
+
+globalStyle('@media (max-width: 768px) .overlay', {
+  padding: '1rem',
+});
+

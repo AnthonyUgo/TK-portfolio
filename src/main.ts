@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     toggle.addEventListener('click', () => {
       navbar.classList.toggle('active');
     });
+
     document.addEventListener('click', (e) => {
       if (
         navbar.classList.contains('active') &&
@@ -39,21 +40,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const letterT = document.getElementById('letter-T');
   const letterK = document.getElementById('letter-K');
 
-  if (letterT && letterK) {
-    // Only run once per session
-    if (!sessionStorage.getItem('tkLogoPlayed')) {
-      sessionStorage.setItem('tkLogoPlayed', 'true');
+  if (letterT && letterK && !sessionStorage.getItem('tkLogoPlayed')) {
+    sessionStorage.setItem('tkLogoPlayed', 'true');
 
-      letterT.classList.add(tkLogo.animateOutT);
-      letterK.classList.add(tkLogo.animateOutK);
+    letterT.classList.add(tkLogo.animateOutT);
+    letterK.classList.add(tkLogo.animateOutK);
 
-      setTimeout(() => {
-        letterT.classList.remove(tkLogo.animateOutT);
-        letterK.classList.remove(tkLogo.animateOutK);
+    setTimeout(() => {
+      letterT.classList.remove(tkLogo.animateOutT);
+      letterK.classList.remove(tkLogo.animateOutK);
 
-        letterT.classList.add(tkLogo.animateInT);
-        letterK.classList.add(tkLogo.animateInK);
-      }, 1600);
-    }
+      letterT.classList.add(tkLogo.animateInT);
+      letterK.classList.add(tkLogo.animateInK);
+    }, 1600);
   }
 });
