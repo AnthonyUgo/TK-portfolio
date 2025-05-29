@@ -97,19 +97,22 @@ globalStyle('.hero', {
   position: 'relative',
 });
 
+// Overlay container
 globalStyle('.overlay', {
+  backgroundColor: 'rgba(0, 0, 0, 0.3)', // subtle tint
+  height: '100%',
+  width: '100%',
   position: 'absolute',
   top: 0,
   left: 0,
-  width: '100%',
-  height: '100%',
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column',
   alignItems: 'center',
-  backgroundColor: 'rgba(0, 0, 0, 0.4)',
-  zIndex: 5,
-  padding: '2rem',
+  justifyContent: 'center',
   textAlign: 'center',
+  color: '#fff',
+  padding: '2rem',
+  zIndex: 2,
 });
 
 // Content wrapper
@@ -120,21 +123,22 @@ globalStyle('.hero-content', {
   gap: '1rem',
 });
 
-// Logo
+// TK logo container
 globalStyle('.tk-logo', {
+  fontFamily: `'Playfair Display', serif`,
   fontSize: '5rem',
-  fontWeight: 700,
-  color: '#fff',
+  fontWeight: 600,
   display: 'flex',
   gap: '0.5rem',
-  zIndex: 10,
+  marginBottom: '1rem',
+  zIndex: 3,
 });
 
 // Tagline
 globalStyle('.tagline', {
   fontSize: '1.2rem',
+  margin: '1rem 0',
   color: '#fff',
-  marginTop: '1rem',
 });
 
 // Button
@@ -142,9 +146,10 @@ globalStyle('.btn', {
   backgroundColor: '#f4d8b4',
   color: '#1e1e1e',
   padding: '0.75rem 1.5rem',
+  border: 'none',
   borderRadius: '25px',
-  fontWeight: 'bold',
   textDecoration: 'none',
+  fontWeight: 'bold',
   marginTop: '1rem',
   transition: 'background-color 0.3s ease',
 });

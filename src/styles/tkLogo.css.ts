@@ -31,13 +31,15 @@ export const tkLogoWrapper = style({
 });
 
 export const logoContainer = style({
-  fontSize: '6rem',
+  fontSize: '6rem', // or 5rem depending on preference
   fontWeight: 700,
   color: '#fff',
   display: 'flex',
-  gap: '1rem',
+  gap: '0.25rem', // <<<< reduce this from '1rem'
   position: 'relative',
   zIndex: 10,
+  justifyContent: 'center',
+  alignItems: 'center',
 });
 
 export const letterT = style({

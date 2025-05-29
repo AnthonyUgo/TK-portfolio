@@ -4,10 +4,16 @@ import './styles/header.css.ts';
 import './styles/button.css.ts';
 import * as tkLogo from './styles/tkLogo.css';
 import { themeClass } from './styles/theme.css';
+import { fadeInUp } from './styles/animations.css';
 
 document.body.classList.add(themeClass);
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Fade-in animation
+  document.querySelectorAll('.fade-in-up').forEach((el) => {
+    el.classList.add(fadeInUp);
+  });
+
   // Navbar toggle
   const toggle = document.getElementById('menu-toggle');
   const navbar = document.getElementById('navbar');
@@ -42,8 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const letterK = document.getElementById('letter-K');
 
   if (logoEl) {
-    logoEl.classList.add(tkLogo.logoContainer); // or tkLogoWrapper if full height
+    logoEl.classList.add(tkLogo.logoContainer); // Use wrapper style if needed
   }
+
   if (letterT && letterK) {
     letterT.classList.add(tkLogo.letterT);
     letterK.classList.add(tkLogo.letterK);
