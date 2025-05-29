@@ -98,45 +98,54 @@ globalStyle('.hero', {
 });
 
 globalStyle('.overlay', {
-  backgroundColor: 'rgba(0, 0, 0, 0.5)',
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  width: '100%',
   height: '100%',
   display: 'flex',
-  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
-  color: 'white',
-  textAlign: 'center',
+  backgroundColor: 'rgba(0, 0, 0, 0.4)',
+  zIndex: 5,
   padding: '2rem',
+  textAlign: 'center',
 });
 
-globalStyle('.logo', {
-  fontFamily: `'Playfair Display', serif`,
-  fontSize: '4rem',
-  letterSpacing: '0.05em',
-  textTransform: 'uppercase',
+// Content wrapper
+globalStyle('.hero-content', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '1rem',
 });
 
-globalStyle('.logo span', {
-  fontWeight: 300,
-  fontSize: '1.5rem',
-  display: 'block',
-  textTransform: 'none',
+// Logo
+globalStyle('.tk-logo', {
+  fontSize: '5rem',
+  fontWeight: 700,
+  color: '#fff',
+  display: 'flex',
+  gap: '0.5rem',
+  zIndex: 10,
 });
 
+// Tagline
 globalStyle('.tagline', {
   fontSize: '1.2rem',
-  margin: '1rem 0 2rem',
-  color: '#e8e6e3',
+  color: '#fff',
+  marginTop: '1rem',
 });
 
+// Button
 globalStyle('.btn', {
   backgroundColor: '#f4d8b4',
   color: '#1e1e1e',
   padding: '0.75rem 1.5rem',
-  border: 'none',
   borderRadius: '25px',
-  textDecoration: 'none',
   fontWeight: 'bold',
+  textDecoration: 'none',
+  marginTop: '1rem',
   transition: 'background-color 0.3s ease',
 });
 
