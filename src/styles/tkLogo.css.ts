@@ -1,5 +1,6 @@
 import { style, keyframes } from '@vanilla-extract/css';
 
+// Keyframes for T and K animations
 const flyAwayT = keyframes({
   '0%': { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
   '100%': { transform: 'translate(-200px, -100px) rotate(-60deg)', opacity: 0 },
@@ -20,6 +21,15 @@ const returnK = keyframes({
   '100%': { transform: 'translate(0, 0) rotate(0deg)', opacity: 1 },
 });
 
+// Wrapper container for TK logo
+export const tkLogoWrapper = style({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '30vh',
+  zIndex: 2,
+});
+
 export const logoContainer = style({
   fontSize: '6rem',
   fontWeight: 700,
@@ -32,10 +42,12 @@ export const logoContainer = style({
 
 export const letterT = style({
   transition: 'opacity 0.5s ease',
+  willChange: 'transform, opacity',
 });
 
 export const letterK = style({
   transition: 'opacity 0.5s ease',
+  willChange: 'transform, opacity',
 });
 
 export const animateOutT = style({

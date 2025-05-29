@@ -37,21 +37,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Logo animation
+  const logoEl = document.getElementById('logo');
   const letterT = document.getElementById('letter-T');
   const letterK = document.getElementById('letter-K');
 
-  if (letterT && letterK && !sessionStorage.getItem('tkLogoPlayed')) {
-    sessionStorage.setItem('tkLogoPlayed', 'true');
+  if (logoEl) {
+    logoEl.classList.add(tkLogo.logoContainer); // or tkLogoWrapper if full height
+  }
+  if (letterT && letterK) {
+    letterT.classList.add(tkLogo.letterT);
+    letterK.classList.add(tkLogo.letterK);
 
-    letterT.classList.add(tkLogo.animateOutT);
-    letterK.classList.add(tkLogo.animateOutK);
+    if (!sessionStorage.getItem('tkLogoPlayed')) {
+      sessionStorage.setItem('tkLogoPlayed', 'true');
 
-    setTimeout(() => {
-      letterT.classList.remove(tkLogo.animateOutT);
-      letterK.classList.remove(tkLogo.animateOutK);
+      letterT.classList.add(tkLogo.animateOutT);
+      letterK.classList.add(tkLogo.animateOutK);
 
-      letterT.classList.add(tkLogo.animateInT);
-      letterK.classList.add(tkLogo.animateInK);
-    }, 1600);
+      setTimeout(() => {
+        letterT.classList.remove(tkLogo.animateOutT);
+        letterK.classList.remove(tkLogo.animateOutK);
+
+        letterT.classList.add(tkLogo.animateInT);
+        letterK.classList.add(tkLogo.animateInK);
+      }, 1600);
+    }
   }
 });
