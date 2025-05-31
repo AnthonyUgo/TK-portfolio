@@ -14,6 +14,11 @@ globalStyle('.nav-container', {
   justifyContent: 'flex-start',
   alignItems: 'center',
   zIndex: 1000,
+  '@media': {
+    '(max-width: 600px)': {
+      padding: '0.5rem 1rem',
+    },
+  },
 });
 
 globalStyle('.logo-small', {
@@ -23,11 +28,11 @@ globalStyle('.logo-small', {
   textShadow: '0 0 10px #00ffff, 0 0 20px #00ffff',
   textDecoration: 'none',
   transition: 'color 0.3s, text-shadow 0.3s',
-});
-
-globalStyle('.logo-small:hover', {
-  color: '#fff',
-  textShadow: '0 0 15px #00ffff, 0 0 25px #00ffff',
+  '@media': {
+    '(max-width: 600px)': {
+      fontSize: '1.5rem',
+    },
+  },
 });
 
 /* Body styling */
@@ -40,15 +45,24 @@ globalStyle('.admin-login-body', {
   alignItems: 'center',
   justifyContent: 'flex-start',
   minHeight: '100vh',
-  padding: '120px 2rem 2rem', // leave space for navbar
+  paddingTop: '120px', // ensures content sits below the navbar
+  paddingLeft: '2rem',
+  paddingRight: '2rem',
+  paddingBottom: '2rem',
 });
 
-/* Heading styling */
+/* Admin Login Heading */
 globalStyle('h1', {
   fontSize: '2.5rem',
   marginBottom: '1rem',
   textShadow: '0 0 5px #00ffff, 0 0 10px #00ffff',
   textAlign: 'center',
+  alignSelf: 'center',
+  '@media': {
+    '(max-width: 600px)': {
+      fontSize: '2rem',
+    },
+  },
 });
 
 /* Form styling */

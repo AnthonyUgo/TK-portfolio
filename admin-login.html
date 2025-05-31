@@ -16,6 +16,9 @@
     </div>
   </header>
 
+ <!-- Spacer to push content below the fixed navbar -->
+  <div class="spacer"></div>
+
   <!-- Admin Login Form -->
   <main>
     <h1>Admin Login</h1>
@@ -26,13 +29,15 @@
       <p class="error" id="error-msg"></p>
     </form>
   </main>
-
+</body>
   <!-- Footer -->
   <footer>
     Built by Anthony Ugochukwu
   </footer>
 
   <!-- Firebase SDK -->
+     <script type="module" src="/src/admin-login.ts"></script>
+</body>
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
