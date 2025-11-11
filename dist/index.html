@@ -1,590 +1,785 @@
-<!DOCTYPE html> <!-- Fix this line -->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TK Curated</title>
-
-  <!-- Scripts should go at the end of body, not here -->
-  <!-- link rel="stylesheet" href="/styles.css" / --> 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- AOS Animations -->
-  <script type="module" crossorigin src="/assets/main-IwtsUhSj.js"></script>
+  <title>TK CURATED — Issue 2025</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Editorial Styles -->
+  <link rel="stylesheet" href="/editorial.css">
+  <script type="module" crossorigin src="/assets/main-BBkyfyjw.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="/assets/main-DHnj6xVj.css">
 </head>
 
 <body>
-<header>
+  
+<!-- HEADER / NAVIGATION -->
+<header id="main-header">
   <div class="nav-container">
-    <a href="#hero" class="logo-small">TK</a>
-    <button id="menu-toggle" aria-label="Open menu">&#9776;</button>
+    <a href="#hero" class="logo-small">TK CURATED</a>
+    <button id="menu-toggle" aria-label="Open menu">☰</button>
     <nav id="navbar">
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#hero">Cover</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#about">About</a></li>
+        <li><a href="#about">Masthead</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="/admin-login.html" class="btn">Admin Login</a></li>
+        <li><a href="#contact">Commission</a></li>
+        <li id="admin-nav-item"><a href="/admin-login.html">Admin</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="hero" id="hero">
-  <div class="overlay">
-    <div id="logo" class="tk-logo">
-      <span id="letter-T" class="tk-letter">T</span>
-      <span id="letter-K" class="tk-letter">K</span>
-    </div>
-    <p class="tagline fade-in-up">Refined Styling for Elevated Presence</p>
-    <a href="#portfolio" class="btn fade-in-up">View Portfolio</a>
+<!-- HERO / MAGAZINE COVER -->
+<section class="hero" id="hero">
+  <!-- Background Image -->
+  <div class="hero-background">
+    <img src="/assets/hero.png" alt="TK Curated Editorial Background" />
   </div>
-</div>
-
-
-  <!-- START PROJECTS -->
-  <section id="portfolio"></section>
-  <!-- Project 1 -->
-<div class="project">
-  <h3>Project 1</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image1.jpg" alt="Project 1 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image2.jpg" alt="Project 1 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image3.jpg" alt="Project 1 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image4.jpg" alt="Project 1 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image5.jpg" alt="Project 1 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image6.jpg" alt="Project 1 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image7.jpg" alt="Project 1 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image8.jpg" alt="Project 1 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project1/image9.jpg" alt="Project 1 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project1/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  
+  <!-- Masthead Title -->
+  <div class="masthead">TK CURATED</div>
+  
+  <!-- Hero Content -->
+  <div class="hero-content">
+    <h1 class="tk-logo">TK</h1>
+    <button class="btn-enter" onclick="document.getElementById('portfolio').scrollIntoView({behavior: 'smooth'})">
+      Enter Portfolio
+    </button>
   </div>
-</div>
-
-
-<div class="project">
-  <h3>Project 2</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image1.jpg" alt="Project 2 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image2.jpg" alt="Project 2 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image3.jpg" alt="Project 2 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image4.jpg" alt="Project 2 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image5.jpg" alt="Project 2 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image6.jpg" alt="Project 2 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image7.jpg" alt="Project 2 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image8.jpg" alt="Project 2 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project2/image9.jpg" alt="Project 2 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project2/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  
+  <!-- Cover Lines -->
+  <div class="cover-lines">
+    <div class="cover-line">Visual Narratives Reimagined</div>
+    <div class="cover-line">Behind the Lens with TK</div>
+    <div class="cover-line">Editorial Excellence Meets Innovation</div>
+    <div class="cover-line">10 Years of Creative Direction</div>
+    <div class="cover-line">The Future of Fashion Styling</div>
   </div>
-</div>
-
-
- <div class="project">
-  <h3>Project 3</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image1.jpg" alt="Project 3 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image2.jpg" alt="Project 3 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image3.jpg" alt="Project 3 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image4.jpg" alt="Project 3 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image5.jpg" alt="Project 3 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image6.jpg" alt="Project 3 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image7.jpg" alt="Project 3 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image8.jpg" alt="Project 3 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project3/image9.jpg" alt="Project 3 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project3/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
+  
+  <!-- Issue Date -->
+  <div class="issue-date">Issue 001 — 2025</div>
+  
+  <!-- QR Code / Instagram Link -->
+  <div class="qr-code">
+    <a href="https://www.instagram.com/trishken_/" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges" aria-label="Instagram QR Code">
+        <path fill="#ffffff" d="M0,0 h37v37H0z"/>
+        <path stroke="#000000" d="M4 4.5h7m1 0h1m2 0h1m1 0h1m1 0h2m1 0h7M4 5.5h1m5 0h1m1 0h2m1 0h1m3 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m2 0h1m1 0h1m1 0h2m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 11.5h1m2 0h2m3 0h1M5 12.5h1m1 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1M4 13.5h2m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m2 0h3m1 0h2m1 0h1M4 14.5h1m1 0h1m1 0h2m2 0h3m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1M4 15.5h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m2 0h1m1 0h1M4 16.5h1m1 0h1m2 0h2m1 0h1m2 0h2m1 0h3m3 0h1m2 0h1M4 17.5h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m1 0h1m1 0h1M4 18.5h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h3M4 19.5h1m2 0h1m1 0h1m2 0h1m4 0h1m3 0h1m1 0h2m1 0h1M6 20.5h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1M4 21.5h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1M4 22.5h1m2 0h3m2 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1M5 23.5h1m1 0h1m1 0h2m4 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2M13 24.5h1m1 0h1m1 0h1m1 0h1m3 0h1m2 0h1m2 0h1M4 25.5h7m3 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1M4 26.5h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1M4 27.5h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m2 0h1M4 28.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m1 0h2M4 29.5h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h2m1 0h2m2 0h2M4 30.5h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1M4 31.5h7m2 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h2"/>
+      </svg>
+    </a>
+    <span class="qr-caption">Scan for BTS & New Drops</span>
   </div>
-</div>
-
-
- <div class="project">
-  <h3>Project 4</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image1.jpg" alt="Project 4 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image2.jpg" alt="Project 4 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image3.jpg" alt="Project 4 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image4.jpg" alt="Project 4 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image5.jpg" alt="Project 4 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image6.jpg" alt="Project 4 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image7.jpg" alt="Project 4 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image8.jpg" alt="Project 4 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project4/image9.jpg" alt="Project 4 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project4/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
- <div class="project">
-  <h3>Project 5</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image1.jpg" alt="Project 5 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image2.jpg" alt="Project 5 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image3.jpg" alt="Project 5 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image4.jpg" alt="Project 5 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image5.jpg" alt="Project 5 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image6.jpg" alt="Project 5 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image7.jpg" alt="Project 5 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image8.jpg" alt="Project 5 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project5/image9.jpg" alt="Project 5 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project5/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 6</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image1.jpg" alt="Project 6 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image2.jpg" alt="Project 6 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image3.jpg" alt="Project 6 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image4.jpg" alt="Project 6 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image5.jpg" alt="Project 6 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image6.jpg" alt="Project 6 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image7.jpg" alt="Project 6 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image8.jpg" alt="Project 6 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project6/image9.jpg" alt="Project 6 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project6/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
- <div class="project">
-  <h3>Project 7</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image1.jpg" alt="Project 7 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image2.jpg" alt="Project 7 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image3.jpg" alt="Project 7 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image4.jpg" alt="Project 7 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image5.jpg" alt="Project 7 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image6.jpg" alt="Project 7 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image7.jpg" alt="Project 7 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image8.jpg" alt="Project 7 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project7/image9.jpg" alt="Project 7 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project7/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-
-<div class="project">
-  <h3>Project 8</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image1.jpg" alt="Project 8 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image2.jpg" alt="Project 8 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image3.jpg" alt="Project 8 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image4.jpg" alt="Project 8 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image5.jpg" alt="Project 8 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image6.jpg" alt="Project 8 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image7.jpg" alt="Project 8 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image8.jpg" alt="Project 8 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project8/image9.jpg" alt="Project 8 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project8/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 9</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image1.jpg" alt="Project 9 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image2.jpg" alt="Project 9 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image3.jpg" alt="Project 9 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image4.jpg" alt="Project 9 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image5.jpg" alt="Project 9 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image6.jpg" alt="Project 9 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image7.jpg" alt="Project 9 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image8.jpg" alt="Project 9 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project9/image9.jpg" alt="Project 9 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project9/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 10</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image1.jpg" alt="Project 10 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image2.jpg" alt="Project 10 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image3.jpg" alt="Project 10 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image4.jpg" alt="Project 10 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image5.jpg" alt="Project 10 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image6.jpg" alt="Project 10 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image7.jpg" alt="Project 10 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image8.jpg" alt="Project 10 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project10/image9.jpg" alt="Project 10 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project10/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 11</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image1.jpg" alt="Project 11 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image2.jpg" alt="Project 11 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image3.jpg" alt="Project 11 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image4.jpg" alt="Project 11 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image5.jpg" alt="Project 11 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image6.jpg" alt="Project 11 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image7.jpg" alt="Project 11 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image8.jpg" alt="Project 11 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project11/image9.jpg" alt="Project 11 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project11/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-  <div class="project">
-  <h3>Project 12</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image1.jpg" alt="Project 12 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image2.jpg" alt="Project 12 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image3.jpg" alt="Project 12 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image4.jpg" alt="Project 12 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image5.jpg" alt="Project 12 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image6.jpg" alt="Project 12 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image7.jpg" alt="Project 12 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image8.jpg" alt="Project 12 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project12/image9.jpg" alt="Project 12 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project12/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 13</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image1.jpg" alt="Project 13 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image2.jpg" alt="Project 13 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image3.jpg" alt="Project 13 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image4.jpg" alt="Project 13 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image5.jpg" alt="Project 13 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image6.jpg" alt="Project 13 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image7.jpg" alt="Project 13 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image8.jpg" alt="Project 13 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project13/image9.jpg" alt="Project 13 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project13/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 14</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image1.jpg" alt="Project 14 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image2.jpg" alt="Project 14 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image3.jpg" alt="Project 14 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image4.jpg" alt="Project 14 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image5.jpg" alt="Project 14 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image6.jpg" alt="Project 14 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image7.jpg" alt="Project 14 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image8.jpg" alt="Project 14 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project14/image9.jpg" alt="Project 14 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project14/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 15</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image1.jpg" alt="Project 15 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image2.jpg" alt="Project 15 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image3.jpg" alt="Project 15 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image4.jpg" alt="Project 15 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image5.jpg" alt="Project 15 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image6.jpg" alt="Project 15 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image7.jpg" alt="Project 15 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image8.jpg" alt="Project 15 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project15/image9.jpg" alt="Project 15 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project15/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 16</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image1.jpg" alt="Project 16 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image2.jpg" alt="Project 16 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image3.jpg" alt="Project 16 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image4.jpg" alt="Project 16 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image5.jpg" alt="Project 16 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image6.jpg" alt="Project 16 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image7.jpg" alt="Project 16 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image8.jpg" alt="Project 16 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project16/image9.jpg" alt="Project 16 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project16/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 17</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image1.jpg" alt="Project 17 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image2.jpg" alt="Project 17 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image3.jpg" alt="Project 17 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image4.jpg" alt="Project 17 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image5.jpg" alt="Project 17 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image6.jpg" alt="Project 17 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image7.jpg" alt="Project 17 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image8.jpg" alt="Project 17 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project17/image9.jpg" alt="Project 17 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project17/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 18</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image1.jpg" alt="Project 18 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image2.jpg" alt="Project 18 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image3.jpg" alt="Project 18 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image4.jpg" alt="Project 18 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image5.jpg" alt="Project 18 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image6.jpg" alt="Project 18 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image7.jpg" alt="Project 18 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image8.jpg" alt="Project 18 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project18/image9.jpg" alt="Project 18 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project18/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 19</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image1.jpg" alt="Project 19 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image2.jpg" alt="Project 19 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image3.jpg" alt="Project 19 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image4.jpg" alt="Project 19 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image5.jpg" alt="Project 19 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image6.jpg" alt="Project 19 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image7.jpg" alt="Project 19 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image8.jpg" alt="Project 19 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project19/image9.jpg" alt="Project 19 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project19/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
-
-<div class="project">
-  <h3>Project 20</h3>
-  <div class="media-grid">
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image1.jpg" alt="Project 20 Image 1"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image2.jpg" alt="Project 20 Image 2"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image3.jpg" alt="Project 20 Image 3"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image4.jpg" alt="Project 20 Image 4"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image5.jpg" alt="Project 20 Image 5"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image6.jpg" alt="Project 20 Image 6"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image7.jpg" alt="Project 20 Image 7"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image8.jpg" alt="Project 20 Image 8"></div>
-    <div class="media media-image" data-aos="fade-up"><img src="media/project20/image9.jpg" alt="Project 20 Image 9"></div>
-    <div class="media media-video" data-aos="zoom-in">
-      <video controls>
-        <source src="media/project20/video10.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-</div>
 </section>
 
-<section id="about">
-  <div class="about-wrapper">
-    <div class="about-image">
-      <img src="/assets/about-image-optimized.jpg" alt="Trish Kennedy" />
+<!-- PORTFOLIO / SPREADS -->
+<section id="portfolio">
+  <div class="spreads-container">
+    
+    <!-- Spread Navigation -->
+    <div class="spread-nav">
+      <button id="prev-spread" aria-label="Previous spread">←</button>
+      <button id="next-spread" aria-label="Next spread">→</button>
     </div>
+    
+    <!-- Spread 01 -->
+    <article class="spread" data-spread="1">
+      <div class="spread-image">
+        <img src="/portfolio/01-cover.jpg" alt="Avant-Garde Editorial Spread" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">01 / 12</div>
+        <h2 class="spread-title">Chromatic Rebellion</h2>
+        <div class="spread-year">2024</div>
+        <p class="spread-description">
+          A bold exploration of color theory meets contemporary street culture. This editorial piece challenges traditional fashion boundaries by juxtaposing vibrant textiles with minimalist urban landscapes. Each frame captures the tension between structure and chaos, creating a visual narrative that speaks to modern identity formation.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Marcus Chen</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Zoe Williams</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Ava Martinez</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Set Design:</span>
+            <span class="credit-name">Studio Noir</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 02 -->
+    <article class="spread" data-spread="2">
+      <div class="spread-image">
+        <img src="/portfolio/02-spread-a.jpg" alt="Monochrome Elegance" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">02 / 12</div>
+        <h2 class="spread-title">Noir Reverie</h2>
+        <div class="spread-year">2024</div>
+        <p class="spread-description">
+          Returning to the essence of black and white photography, this series strips away color to reveal pure form and emotion. Inspired by 1950s Hollywood glamour, the styling merges vintage silhouettes with modern fabrication techniques, creating timeless pieces that transcend era.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Isabella Romano</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Hair Styling:</span>
+            <span class="credit-name">Jordan Blake</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Naomi Okafor</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 03 -->
+    <article class="spread" data-spread="3">
+      <div class="spread-image">
+        <img src="/portfolio/03-spread-b.jpg" alt="Textile Innovation" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">03 / 12</div>
+        <h2 class="spread-title">Fabricated Dreams</h2>
+        <div class="spread-year">2023</div>
+        <p class="spread-description">
+          An intimate study of texture and materiality. This project showcases emerging designers who work with sustainable and innovative textiles. The styling emphasizes tactile qualities, inviting viewers to imagine the sensation of each fabric against skin. Shot in natural light to honor the organic nature of the materials.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Liam Foster</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Aisha Patel</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Models:</span>
+            <span class="credit-name">Collective Cast</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 04 -->
+    <article class="spread" data-spread="4">
+      <div class="spread-image">
+        <img src="/portfolio/04-spread-c.jpg" alt="Architectural Fashion" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">04 / 12</div>
+        <h2 class="spread-title">Structure & Flow</h2>
+        <div class="spread-year">2023</div>
+        <p class="spread-description">
+          Where architecture meets fashion design. This editorial explores the relationship between built environments and body-worn structures. Sharp lines contrast with flowing fabrics, creating dynamic compositions that challenge our perception of space and form.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Sofia Andersson</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Hair & Makeup:</span>
+            <span class="credit-name">Taylor Kim</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Claudia Santos</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Location:</span>
+            <span class="credit-name">Brutalist Archive</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 05 -->
+    <article class="spread" data-spread="5">
+      <div class="spread-image">
+        <img src="/portfolio/05-spread-d.jpg" alt="Cultural Heritage" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">05 / 12</div>
+        <h2 class="spread-title">Heritage Reimagined</h2>
+        <div class="spread-year">2023</div>
+        <p class="spread-description">
+          A celebration of cultural identity through contemporary styling. This series honors traditional craftsmanship while reimagining heritage garments for the modern wardrobe. Each piece tells a story of migration, memory, and creative evolution.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Kwame Asante</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Amara Johnson</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Destiny Moore</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 06 -->
+    <article class="spread" data-spread="6">
+      <div class="spread-image">
+        <img src="/portfolio/06-spread-e.jpg" alt="Futurism Editorial" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">06 / 12</div>
+        <h2 class="spread-title">Tomorrow's Silhouette</h2>
+        <div class="spread-year">2022</div>
+        <p class="spread-description">
+          Speculative fashion for an uncertain future. This forward-thinking editorial imagines clothing as adaptive technology—garments that respond to environment, emotion, and identity. The styling emphasizes innovation in cut, material, and conceptual approach.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Yuki Tanaka</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Hair Styling:</span>
+            <span class="credit-name">River Stone</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Nova Chen</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Digital Art:</span>
+            <span class="credit-name">Pixel Labs</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 07 -->
+    <article class="spread" data-spread="7">
+      <div class="spread-image">
+        <img src="/portfolio/07-spread-f.jpg" alt="Natural Beauty" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">07 / 12</div>
+        <h2 class="spread-title">Earth Tones</h2>
+        <div class="spread-year">2022</div>
+        <p class="spread-description">
+          A return to nature through fashion. Earthy palettes, organic shapes, and sustainable materials create harmony between human form and natural environment. Shot on location in remote landscapes, this series celebrates simplicity and conscious design.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Elena Volkov</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Chloe Bernard</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Sienna Roberts</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 08 -->
+    <article class="spread" data-spread="8">
+      <div class="spread-image">
+        <img src="/portfolio/08-spread-g.jpg" alt="Avant-Garde Styling" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">08 / 12</div>
+        <h2 class="spread-title">Deconstruction</h2>
+        <div class="spread-year">2022</div>
+        <p class="spread-description">
+          Fashion as conceptual art. This provocative series questions the very nature of clothing—what defines a garment? How do we construct identity through dress? The styling deliberately subverts expectations, creating wearable sculptures that challenge conventional beauty standards.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Diego Ramirez</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Hair & Makeup:</span>
+            <span class="credit-name">Sasha Ivanov</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Phoenix Lee</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 09 -->
+    <article class="spread" data-spread="9">
+      <div class="spread-image">
+        <img src="/portfolio/09-spread-h.jpg" alt="Luxury Fashion" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">09 / 12</div>
+        <h2 class="spread-title">Gilded Age</h2>
+        <div class="spread-year">2021</div>
+        <p class="spread-description">
+          Opulence redefined for contemporary tastes. This luxury editorial celebrates craftsmanship, featuring couture pieces from emerging and established designers. Rich textures, intricate details, and sumptuous fabrics create a visual feast of refined elegance.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Valentina Rossi</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Laurent Dubois</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Anastasia Volkov</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Location:</span>
+            <span class="credit-name">Château Moderne</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 10 -->
+    <article class="spread" data-spread="10">
+      <div class="spread-image">
+        <img src="/portfolio/10-spread-i.jpg" alt="Street Style" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">10 / 12</div>
+        <h2 class="spread-title">Urban Poetry</h2>
+        <div class="spread-year">2021</div>
+        <p class="spread-description">
+          The city as runway. This energetic series captures the authentic spirit of street fashion—unfiltered, diverse, and constantly evolving. Styling emphasizes individuality and self-expression, celebrating the creativity found in everyday urban life.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Jamal Washington</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Hair Styling:</span>
+            <span class="credit-name">Maya Thompson</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Models:</span>
+            <span class="credit-name">Street Cast</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 11 -->
+    <article class="spread" data-spread="11">
+      <div class="spread-image">
+        <img src="/portfolio/11-spread-j.jpg" alt="Conceptual Fashion" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">11 / 12</div>
+        <h2 class="spread-title">Liminal Spaces</h2>
+        <div class="spread-year">2021</div>
+        <p class="spread-description">
+          Fashion exists in the in-between. This contemplative series explores transitional moments—dawn, dusk, doorways, thresholds. The styling creates visual metaphors for transformation, using light, shadow, and movement to capture fleeting emotions.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Otto Schmidt</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Makeup Artist:</span>
+            <span class="credit-name">Luna Park</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Model:</span>
+            <span class="credit-name">Echo Martinez</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+    <!-- Spread 12 -->
+    <article class="spread" data-spread="12">
+      <div class="spread-image">
+        <img src="/portfolio/12-spread-k.jpg" alt="Final Editorial Spread" />
+      </div>
+      <div class="spread-content">
+        <div class="spread-number">12 / 12</div>
+        <h2 class="spread-title">The Journey Continues</h2>
+        <div class="spread-year">2025</div>
+        <p class="spread-description">
+          A culmination of creative exploration and a promise of future innovation. This final spread represents not an ending, but a new beginning—the evolution of a creative practice that continues to push boundaries and redefine contemporary styling.
+        </p>
+        <div class="spread-credits">
+          <div class="credit-line">
+            <span class="credit-role">Photography:</span>
+            <span class="credit-name">Various Artists</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Styling:</span>
+            <span class="credit-name">Trish Kennedy</span>
+          </div>
+          <div class="credit-line">
+            <span class="credit-role">Creative Direction:</span>
+            <span class="credit-name">TK Curated</span>
+          </div>
+        </div>
+      </div>
+    </article>
+    
+  </div>
+</section>
 
-    <div class="about-content">
-      <p>
-        I am a versatile creative currently residing in Houston, Texas, and Lagos, Nigeria. From a young age, I have had a
-        passion for fashion and photography, which inspired me to pursue a career as a fashion designer. Throughout the
-        years, I have explored various fields, but I always knew I would find my way back to the arts.
-      </p>
-      <p>
-        My creative journey began in 2017 when I started modeling, a path I naturally embraced. In 2020, I transitioned into
-        styling and fashion design, as I frequently found myself on set surrounded by an abundance of clothing. This allowed
-        me to assist in styling both myself and other models. Eventually, I started creative directing my own photo shoots
-        and bringing other people's concepts to life. This transition has been incredibly rewarding, as I genuinely enjoy
-        helping others realize their creative visions and expectations.
-      </p>
-      <p>
-        I never anticipated that my curiosity for creativity would lead me this far, but it certainly has. Over the past eight
-        years, I have experienced and accomplished so much, and I am excited to see what the future has in store for me.
-      </p>
-
-      <div class="press-links">
-        <h3>Featured In</h3>
-        <ul>
-          <li><a href="https://canvasrebel.com/meet-trish-kennedy/" target="_blank">Canvas Rebel – Meet Trish Kennedy</a></li>
-          <li><a href="https://voyagesanantonio.com/interview/rising-stars-meet-trish-kennedy-of-houston/" target="_blank">Voyage SA – Rising Stars</a></li>
-        </ul>
+<!-- ABOUT / MASTHEAD & INTERVIEW -->
+<section id="about">
+  <div class="about-container">
+    
+    <!-- Masthead Section -->
+    <div class="masthead-section">
+      <div class="masthead-portrait">
+        <img src="/assets/about-image-optimized.jpg" alt="Trish Kennedy Portrait" />
+      </div>
+      <div class="masthead-info">
+        <h2 class="masthead-name">TRISH<br>KENNEDY</h2>
+        <div class="masthead-title">Creative Director & Stylist</div>
+        <p class="masthead-bio">
+          A versatile creative force bridging Houston and Lagos, Trish Kennedy has spent the past decade transforming vision into visual narrative. From runway to editorial, her work embodies the intersection of cultural heritage, contemporary innovation, and artistic excellence.
+        </p>
+        <div class="signature-mark">TK</div>
       </div>
     </div>
+    
+    <!-- Interview Section -->
+    <div class="interview-section">
+      <p class="interview-intro">
+        "Fashion is not about clothes—it's about creating moments that live beyond the frame."
+      </p>
+      
+      <!-- Q&A Pairs -->
+      <div class="qa-pair">
+        <div class="question">What drew you to creative direction and styling?</div>
+        <div class="answer">
+          It was organic, really. I started modeling in 2017, and I was constantly surrounded by incredible garments and creative energy on set. I found myself naturally gravitating toward styling—not just for myself, but for other models too. By 2020, I had transitioned fully into styling and fashion design. I realized I loved the entire creative process: the conceptualization, the collaboration, bringing someone's vision to life. That's when I knew this was my path.
+        </div>
+      </div>
+      
+      <div class="qa-pair">
+        <div class="question">How do you describe your aesthetic?</div>
+        <div class="answer">
+          I'd say it's intentional yet fluid. I draw inspiration from everything—architecture, music, street culture, heritage textiles. My approach is about finding balance: structure with movement, tradition with innovation, boldness with subtlety. Every project is different, but there's always an underlying thread of authenticity and purpose.
+        </div>
+      </div>
+      
+      <!-- Pull Quote -->
+      <blockquote class="pull-quote">
+        "I never anticipated that my curiosity for creativity would lead me this far, but it certainly has."
+      </blockquote>
+      
+      <div class="qa-pair">
+        <div class="question">What has been your most challenging project?</div>
+        <div class="answer">
+          Every project has its own set of challenges, but one that stands out was an editorial shoot in Lagos where we had to work with limited resources and unpredictable weather. It taught me the importance of adaptability and creative problem-solving. Some of the best images from that shoot came from spontaneous decisions we made on location. That's the beauty of this work—constraints can spark the most innovative solutions.
+        </div>
+      </div>
+      
+      <div class="qa-pair">
+        <div class="question">How do you approach collaboration?</div>
+        <div class="answer">
+          Collaboration is everything. I work closely with photographers, makeup artists, models, and set designers to create a unified vision. I'm a firm believer that the best work comes from listening—understanding what everyone brings to the table and finding ways to elevate the collective output. It's not about imposing my vision; it's about co-creating something greater than the sum of its parts.
+        </div>
+      </div>
+      
+      <!-- Callout Stat -->
+      <div class="callout-stat">
+        <div class="stat-number">8+</div>
+        <div class="stat-label">Years of Creative Excellence</div>
+      </div>
+      
+      <div class="qa-pair">
+        <div class="question">What's next for TK Curated?</div>
+        <div class="answer">
+          The journey is just beginning. I'm excited to expand into more international markets, collaborate with emerging designers, and continue pushing the boundaries of what fashion styling can be. I'm also passionate about mentorship—helping the next generation of creatives find their voice and build sustainable careers in this industry. The future holds so much possibility, and I can't wait to see what we create together.
+        </div>
+      </div>
+      
+      <!-- Pull Quote -->
+      <blockquote class="pull-quote">
+        "Fashion is a conversation—between past and present, body and fabric, artist and audience."
+      </blockquote>
+      
+    </div>
+    
+    <div class="issue-mark">Issue 001 — 2025</div>
+    
+  </div>
 </section>
 
-<section id="faq" class="faq-section">
-  <h2>Frequently Asked Questions</h2>
-  <div class="faq-item">
-    <button class="faq-question">What services does TK Curated offer?</button>
-    <div class="faq-answer">We offer personal styling, fashion consulting, and creative direction for photoshoots and events.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">Where are you based?</button>
-    <div class="faq-answer">TK Curated is based in both Houston, Texas and Lagos, Nigeria, but available globally.</div>
-  </div>
-  <div class="faq-item">
-    <button class="faq-question">Can I book you for a shoot or event?</button>
-    <div class="faq-answer">Yes, booking inquiries can be submitted through the contact form or emailed directly.</div>
-  </div>
-</section>
-
+<!-- CONTACT / COMMISSION BRIEF -->
 <section id="contact">
-  <h2>Get in Touch</h2>
-  <form action="https://formspree.io/f/xovdyjyz" method="POST">
-    <label for="name">Name</label>
-    <input type="text" name="name" required>
-
-    <label for="email">Your Email</label>
-    <input type="email" name="email" required>
-
-    <label for="message">Message</label>
-    <textarea name="message" rows="5" required></textarea>
-
-    <button type="submit">Send Message</button>
-  </form>
+  <div class="contact-container">
+    <div class="contact-header">
+      <h2 class="contact-title">Commission Brief</h2>
+      <p class="contact-subtitle">Let's create something extraordinary together</p>
+    </div>
+    
+    <form class="brief-form" action="https://formspree.io/f/xovdyjyz" method="POST">
+      
+      <div class="form-section">
+        <label for="name" class="form-label">Your Name</label>
+        <input type="text" id="name" name="name" class="form-input" required />
+      </div>
+      
+      <div class="form-section">
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" class="form-input" required />
+      </div>
+      
+      <div class="form-section">
+        <label for="project-type" class="form-label">Project Type</label>
+        <select id="project-type" name="project-type" class="form-select" required>
+          <option value="">Select a project type</option>
+          <option value="editorial">Editorial Shoot</option>
+          <option value="campaign">Campaign Styling</option>
+          <option value="personal">Personal Styling</option>
+          <option value="event">Event / Red Carpet</option>
+          <option value="creative-direction">Creative Direction</option>
+          <option value="consultation">Consultation</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      
+      <div class="form-section">
+        <label for="timeline" class="form-label">Desired Timeline</label>
+        <input type="text" id="timeline" name="timeline" class="form-input" placeholder="e.g., Within 2 months, Q1 2025" />
+        <div class="form-helper">When do you envision this project coming to life?</div>
+      </div>
+      
+      <div class="form-section">
+        <label for="budget" class="form-label">Budget Range</label>
+        <select id="budget" name="budget" class="form-select">
+          <option value="">Select budget range</option>
+          <option value="under-5k">Under $5,000</option>
+          <option value="5k-10k">$5,000 - $10,000</option>
+          <option value="10k-25k">$10,000 - $25,000</option>
+          <option value="25k-plus">$25,000+</option>
+          <option value="negotiable">Open to Discussion</option>
+        </select>
+      </div>
+      
+      <div class="form-section">
+        <label for="moodboard" class="form-label">Moodboard / Reference Link</label>
+        <input type="url" id="moodboard" name="moodboard" class="form-input" placeholder="https://pinterest.com/..." />
+        <div class="form-helper">Share your visual inspiration (Pinterest, Google Drive, etc.)</div>
+      </div>
+      
+      <div class="form-section">
+        <label for="description" class="form-label">Project Description</label>
+        <textarea id="description" name="description" class="form-textarea" required placeholder="Tell me about your vision, goals, and any specific requirements..."></textarea>
+      </div>
+      
+      <div class="agent-block">
+        <div class="agent-title">For Agency Inquiries</div>
+        <a href="mailto:agent@tkcurated.com" class="agent-email">agent@tkcurated.com</a>
+      </div>
+      
+      <button type="submit" class="btn-submit">Send Brief</button>
+      
+      <p class="privacy-line">
+        By submitting this form, you agree to our privacy policy. We'll review your brief and respond within 48-72 hours.
+      </p>
+      
+    </form>
+    
+    <div class="postal-address">
+      TK CURATED<br>
+      Houston, TX / Lagos, Nigeria<br>
+      Available for projects worldwide<br>
+      studio@tkcurated.com
+    </div>
+    
+  </div>
 </section>
 
-<div style="
-  position: fixed;
-  bottom: 5px;
-  right: 5px;
-  font-size: 0.75rem;
-  color: #00ffff;
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: 9999;">
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-container">
+    <div class="faq-header">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">What services does TK Curated offer?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">TK Curated specializes in creative direction, editorial styling, campaign development, personal styling, wardrobe consulting, and fashion consultation for photoshoots, events, and brand activations. We work across commercial and editorial projects, tailoring our approach to each client's unique vision and goals.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">What are your rates and booking minimums?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Rates vary based on project scope, timeline, and complexity. Editorial day rates start at $1,500, while campaign and creative direction projects are quoted individually. A 50% deposit is required to secure booking dates. Rush fees apply for projects with less than two weeks' notice. Contact us for a detailed quote tailored to your specific needs.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">How far in advance should I book?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">We recommend booking at least 4-6 weeks in advance for editorial projects and 8-12 weeks for larger campaigns or events. This allows adequate time for concept development, sourcing, and preparation. However, we do accept rush projects based on availability, with applicable rush fees.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">Do you provide wardrobe and accessories, or do clients need to source them?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Wardrobe sourcing is included in our styling services. We work with an extensive network of designers, showrooms, and rental houses to curate pieces that align with your project vision. Clients are responsible for wardrobe budgets, rental fees, and any associated costs. We can also work with client-provided wardrobes if preferred.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">What is your policy on usage rights and image licensing?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Usage rights are negotiated per project and detailed in the contract. Standard editorial work includes one-time publication rights. Commercial and campaign work requires licensing agreements that specify usage duration, territories, and platforms. Additional fees apply for extended or exclusive usage. We retain the right to use images in our portfolio unless otherwise agreed.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">Do you work internationally, and do you cover travel expenses?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Yes, we work on projects worldwide. We're based between Houston, TX and Lagos, Nigeria, but frequently travel for shoots and events. Travel expenses—including airfare, accommodation, ground transportation, and per diem—are billed separately and agreed upon in advance. International projects typically require a 50% deposit to cover travel booking.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">What happens if a shoot needs to be rescheduled or canceled?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Cancellations or rescheduling requests made more than 14 days before the shoot date incur no penalty. Within 14 days, a 25% fee applies. Within 7 days, 50%. Cancellations within 48 hours forfeit the full deposit. We understand that unforeseen circumstances arise and will work with clients to find mutually agreeable solutions whenever possible.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">Can you accommodate same-day or last-minute styling requests?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">While we prefer adequate lead time for optimal results, we can accommodate rush requests based on current availability and project feasibility. Same-day and last-minute bookings (less than 72 hours) incur a 100% rush fee. Wardrobe options may be limited due to sourcing constraints, but we'll work with available resources to deliver the best possible outcome.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">Do you offer reshoots if the client is unsatisfied with the styling?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Client satisfaction is our priority. If the final result doesn't meet agreed-upon specifications outlined in our contract, we'll discuss reasonable adjustments. Reshoots due to styling issues are evaluated case-by-case. However, reshoots requested due to changes in creative direction, photography, or other factors outside styling are billed as new projects.</p>
+      </div>
+    </div>
+    
+    <div class="faq-item">
+      <button class="faq-question">How do I get started with TK Curated?</button>
+      <div class="faq-answer">
+        <p class="drop-cap">Getting started is simple. Fill out our Commission Brief form above with details about your project, vision, timeline, and budget. We'll review your submission and respond within 48-72 hours to schedule an initial consultation. From there, we'll develop a proposal tailored to your needs, finalize the agreement, and begin bringing your vision to life.</p>
+      </div>
+    </div>
+    
+    <div class="booking-policy">
+      <a href="/booking-policy.pdf" target="_blank">Download Full Booking Policy →</a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-page-count">Page 01</div>
+    <div class="footer-copyright">© 2025 TK Curated. All Rights Reserved.</div>
+    <div class="footer-qr">
+      <a href="https://www.instagram.com/trishken_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37" shape-rendering="crispEdges">
+          <path fill="#ffffff" d="M0,0 h37v37H0z"/>
+          <path stroke="#000000" d="M4 4.5h7m1 0h1m2 0h1m1 0h1m1 0h2m1 0h7M4 5.5h1m5 0h1m1 0h2m1 0h1m3 0h1m1 0h1m5 0h1M4 6.5h1m1 0h3m1 0h1m2 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1M4 7.5h1m1 0h3m1 0h1m3 0h2m2 0h1m1 0h1m1 0h3m1 0h1M4 8.5h1m1 0h3m1 0h1m1 0h1m2 0h1m1 0h2m1 0h1m1 0h3m1 0h1M4 9.5h1m5 0h1m2 0h1m1 0h1m1 0h2m1 0h1m5 0h1M4 10.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M13 11.5h1m2 0h2m3 0h1M5 12.5h1m1 0h2m1 0h1m1 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1m1 0h1M4 13.5h2m1 0h2m1 0h2m1 0h1m1 0h2m1 0h1m2 0h3m1 0h2m1 0h1M4 14.5h1m1 0h1m1 0h2m2 0h3m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m1 0h1M4 15.5h1m2 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h3m2 0h1m1 0h1M4 16.5h1m1 0h1m2 0h2m1 0h1m2 0h2m1 0h3m3 0h1m2 0h1M4 17.5h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1m2 0h3m1 0h1m1 0h1m1 0h1M4 18.5h1m1 0h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h3m1 0h3M4 19.5h1m2 0h1m1 0h1m2 0h1m4 0h1m3 0h1m1 0h2m1 0h1M6 20.5h1m1 0h1m1 0h2m1 0h1m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m1 0h1M4 21.5h1m1 0h1m2 0h2m1 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1M4 22.5h1m2 0h3m2 0h2m2 0h1m1 0h1m1 0h1m1 0h1m3 0h1M5 23.5h1m1 0h1m1 0h2m4 0h2m1 0h1m1 0h2m1 0h1m1 0h1m1 0h2M13 24.5h1m1 0h1m1 0h1m1 0h1m3 0h1m2 0h1m2 0h1M4 25.5h7m3 0h1m1 0h1m1 0h1m2 0h2m1 0h1m1 0h1M4 26.5h1m5 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1M4 27.5h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m3 0h1m2 0h1M4 28.5h1m1 0h3m1 0h1m1 0h1m1 0h1m1 0h1m2 0h2m2 0h1m1 0h2M4 29.5h1m1 0h3m1 0h1m1 0h2m2 0h1m2 0h2m1 0h2m2 0h2M4 30.5h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1M4 31.5h7m2 0h1m1 0h1m2 0h1m1 0h1m2 0h1m1 0h2"/>
+        </svg>
+      </a>
+      <span class="footer-qr-caption">Issue 2025</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Admin Credit -->
+<div style="position: fixed; bottom: 5px; right: 5px; font-size: 0.65rem; color: #666666; opacity: 0.3; pointer-events: none; z-index: 9999;">
   Built by Anthony Ugochukwu
 </div>
 
-<!-- AOS JavaScript -->
- <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    // Mobile nav toggle
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggle = document.getElementById('menu-toggle');
-      const nav = document.getElementById('navbar');
+<!-- JavaScript -->
 
-      if (toggle && nav) {
-        toggle.addEventListener('click', () => {
-          nav.classList.toggle('active');
-        });
-      }
-
-      // Initialize AOS animations
-      AOS.init({
-        duration: 800,
-        easing: 'ease-in-out',
-        once: true
-      });
-  
-  document.querySelectorAll('.media').forEach(media => {
-    const flash = document.createElement('div');
-    flash.className = 'flash';
-    media.appendChild(flash);
-
-    media.addEventListener('click', () => {
-      flash.style.opacity = 0.7;
-      setTimeout(() => flash.style.opacity = 0, 150);
-    });
-  });
-});
-</script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Mobile nav toggle
     const toggle = document.getElementById('menu-toggle');
     const nav = document.getElementById('navbar');
 
@@ -593,13 +788,135 @@
         nav.classList.toggle('active');
       });
 
-      // Auto-close after link click
+      // Close nav when clicking outside
+      document.addEventListener('click', (e) => {
+        if (nav.classList.contains('active') && !nav.contains(e.target) && e.target !== toggle) {
+          nav.classList.remove('active');
+        }
+      });
+
+      // Close nav when clicking a link
       nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           nav.classList.remove('active');
         });
       });
     }
+
+    // Header scroll effect
+    const header = document.getElementById('main-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const wasActive = item.classList.contains('active');
+        
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(faq => {
+          faq.classList.remove('active');
+        });
+        
+        // Open clicked item if it wasn't active
+        if (!wasActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Portfolio spread navigation
+    const spreads = document.querySelectorAll('.spread');
+    let currentSpread = 0;
+
+    function showSpread(index) {
+      spreads.forEach((spread, i) => {
+        spread.classList.remove('visible');
+        if (i === index) {
+          spread.classList.add('visible');
+          spread.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    }
+
+    // Show first spread initially
+    if (spreads.length > 0) {
+      spreads[0].classList.add('visible');
+    }
+
+    // Spread navigation buttons
+    const prevBtn = document.getElementById('prev-spread');
+    const nextBtn = document.getElementById('next-spread');
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        if (currentSpread > 0) {
+          currentSpread--;
+          showSpread(currentSpread);
+        }
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentSpread < spreads.length - 1) {
+          currentSpread++;
+          showSpread(currentSpread);
+        }
+      });
+
+      // Update button states
+      function updateButtons() {
+        prevBtn.disabled = currentSpread === 0;
+        nextBtn.disabled = currentSpread === spreads.length - 1;
+      }
+
+      updateButtons();
+
+      // Keyboard navigation
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft' && currentSpread > 0) {
+          currentSpread--;
+          showSpread(currentSpread);
+          updateButtons();
+        } else if (e.key === 'ArrowRight' && currentSpread < spreads.length - 1) {
+          currentSpread++;
+          showSpread(currentSpread);
+          updateButtons();
+        } else if (e.key === 'Escape') {
+          document.getElementById('hero').scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Intersection Observer for spreads
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          const index = Array.from(spreads).indexOf(entry.target);
+          if (index !== -1) {
+            currentSpread = index;
+            if (prevBtn && nextBtn) {
+              prevBtn.disabled = currentSpread === 0;
+              nextBtn.disabled = currentSpread === spreads.length - 1;
+            }
+          }
+        }
+      });
+    }, observerOptions);
+
+    spreads.forEach(spread => observer.observe(spread));
   });
 </script>
 

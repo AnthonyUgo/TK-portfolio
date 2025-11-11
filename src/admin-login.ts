@@ -1,1 +1,1 @@
-import './styles/adminLogin.css.js';
+// Admin login functionality - styles loaded via HTML link tag
