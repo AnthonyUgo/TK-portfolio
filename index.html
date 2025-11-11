@@ -902,13 +902,21 @@
 
       updateButtons();
 
-      // Keyboard navigation
+      // Keyboard navigation (only when in portfolio section)
       document.addEventListener('keydown', (e) => {
+        const portfolioSection = document.getElementById('portfolio');
+        const rect = portfolioSection.getBoundingClientRect();
+        const isInPortfolio = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (!isInPortfolio) return; // Don't handle arrow keys outside portfolio
+        
         if (e.key === 'ArrowLeft' && currentSpread > 0) {
+          e.preventDefault(); // Prevent default scroll behavior
           currentSpread--;
           showSpread(currentSpread);
           updateButtons();
         } else if (e.key === 'ArrowRight' && currentSpread < spreads.length - 1) {
+          e.preventDefault(); // Prevent default scroll behavior
           currentSpread++;
           showSpread(currentSpread);
           updateButtons();
@@ -917,6 +925,23 @@
         }
       });
     }
+    
+    // Show/hide navigation arrows based on scroll position
+    const portfolioSection = document.getElementById('portfolio');
+    const spreadNav = document.querySelector('.spread-nav');
+    
+    window.addEventListener('scroll', () => {
+      if (portfolioSection && spreadNav) {
+        const rect = portfolioSection.getBoundingClientRect();
+        const isInPortfolio = rect.top < window.innerHeight && rect.bottom > 0;
+        
+        if (isInPortfolio) {
+          spreadNav.classList.add('active');
+        } else {
+          spreadNav.classList.remove('active');
+        }
+      }
+    });
 
     // Intersection Observer for spreads
     const observerOptions = {

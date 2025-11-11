@@ -520,9 +520,15 @@ nav ul li a:hover::after {
   transform: translateY(-50%);
   z-index: 100;
   pointer-events: none;
-  display: flex;
+  display: none;
   justify-content: space-between;
   padding: 0 var(--space-md);
+}
+
+/* Only show navigation when portfolio section is visible */
+#portfolio:hover .spread-nav,
+#portfolio .spread-nav.active {
+  display: flex;
 }
 
 .spread-nav button {
@@ -1065,11 +1071,12 @@ footer {
   .masthead {
     position: absolute;
     top: 1.5rem;
-    left: 1.5rem;
-    font-size: clamp(1.3rem, 5vw, 1.8rem);
-    letter-spacing: 0.25em;
+    left: 1rem;
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    letter-spacing: 0.2em;
     text-align: left;
     margin: 0;
+    max-width: 45%;
   }
 
   .tk-logo {
@@ -1077,15 +1084,18 @@ footer {
   }
 
   .cover-lines {
-    right: 1.5rem;
-    gap: 0.75rem;
-    max-width: 55%;
+    right: 1rem;
+    gap: 0.5rem;
+    max-width: 48%;
+    padding-right: 0.5rem;
   }
 
   .cover-line {
-    font-size: 0.8rem;
-    letter-spacing: 0.08em;
-    line-height: 1.35;
+    font-size: clamp(0.65rem, 1.8vw, 0.75rem);
+    letter-spacing: 0.06em;
+    line-height: 1.3;
+    word-wrap: break-word;
+    hyphens: auto;
   }
 
   .qr-code {
