@@ -294,13 +294,12 @@ nav ul li a:hover::after {
 
 /* Cover Logo */
 .tk-logo {
-  font-family: var(--font-serif);
-  font-size: var(--text-masthead);
-  font-weight: 400;
-  letter-spacing: var(--tracking-tight);
-  line-height: var(--leading-tight);
+  max-width: min(600px, 60vw);
+  width: 100%;
+  height: auto;
+  display: block;
   margin-bottom: var(--space-xl);
-  text-shadow: var(--shadow-text);
+  filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.3));
 }
 
 /* Cover Lines */
@@ -1073,8 +1072,8 @@ footer {
     margin: 0;
   }
 
-  .logo-large {
-    font-size: clamp(4rem, 18vw, 7rem);
+  .tk-logo {
+    max-width: min(400px, 70vw);
   }
 
   .cover-lines {
